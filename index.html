@@ -9,6 +9,12 @@
 </head>
 
 <body>
+ <button id="but">Toggle now</button>
+    <div id="wiki">
+        Development began shortly after the release of Splatoon 3 in 2022. The team sought to reinvent the traditional structure of Splatoon single-player campaigns, such as having the player's character's death force the loss of all progress from their current climb, and granting the ability to purchase upgrades to ease future attempts. Side Order received favorable reviews from critics, with praise given to its art direction and integration of Splatoon's gameplay mechanics into the roguelite genre. Some were displeased with a perceived lack of level diversity over time.
+
+
+    </div>
     <p> Click on 1</p>
     <p> Click on 2</p>
     <p> Click on 3</p>
@@ -18,40 +24,108 @@
 <script src="jq/jquery-4.0.0.min.js"></script>
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
 
         //properties //
-        $('p').click( function() {
-        console.log("  Radha rani");
-        $(this).hide();
-    });
- // Events in j query //
+        $('p').click(function () {
+            console.log("  Radha rani");
+            $(this).hide();
+        });
+        // Events in j query //
 
- // Mouse Events //
-  $('p ').dblclick(function (){
-    console.log("you doble click on :" ,this);
-  });
+        // Mouse Events //
+        //   $('p ').dblclick(function (){
+        //     console.log("you doble click on :" ,this);
+        //   });
 
-  $('p:first').mouseenter(function (){
-    console.log("Your  mouseenter evet fired : " , this);
-  });
+        //   $('p:first').mouseenter(function (){
+        //     console.log("Your  mouseenter evet fired : " , this);
+        //   });
 
-  $('p').mouseup(function (){
-    console.log(" your mouse up event fired" , this);
-  });
+        //   $('p').mouseup(function (){
+        //     console.log(" your mouse up event fired" , this);
+        //   });
 
-  $('p').mouseleave(function(){
-     console.log(" your mouseleave event fired" ,this);
-  });
-   // hover  specially it take two parameter //
-    $('p').hover(function (){
-        console.log (" mouse in the elemant " , this);
-    }, function (){
-        console.log("mouse out from the element " , this)
-    });
+        //   $('p').mouseleave(function(){
+        //      console.log(" your mouseleave event fired" ,this);
+        //   });
+        //    // hover  specially it take two parameter //
+        //     $('p').hover(function (){
+        //         console.log (" mouse in the elemant " , this);
+        //     }, function (){
+        //         console.log("mouse out from the element " , this)
+        //     });
 
-    });
+
+
+        //  Demoing on method //
+        // By 'on'  we can envoke multiple events //
+        $('p').on({
+            click: function () {
+                console.log("click function is fired using 'ON'", this);
+
+            },
+            mouseleave: function () {
+                console.log(" mouse leave event fired using 'oN'", this);
+            },
+            mouseup: function () {
+                console.log(" keyboad  funtion is fird using 'ON'", this);
+            }
+        })
+
+        // Show and hidden //
+        $('#but').click(function(){
+           $('#wiki').hide( 1000 , function(){
+            console.log(' para hidden');
+           })
+        });
+       
+        $('#but').click(function(){
+           $('#wiki').show( 1000 , function(){
+            console.log(' para show');
+           })
+        });
+
+        // use of togge :- agar paragraph hide hai to show kar de ga agar show hai to hide kar de ga //
+        
+        $('#but').click(function(){
+           $('#wiki').toggle( 1000 , function(){
+            console.log(" toggle fired");
+           })
+        });
+
+        // use of fadeIn() function //
+
+         $('#but').click(function(){
+               $('#wiki').fadeOut( 1000 , function(){
+            console.log(' Fade out ');
+           })
+        });  
+        
+        // //  use of fadeIn //
+        $('#but').click(function(){
+           $('#wiki').fadeIn( 2000 , function(){
+            console.log(' fade IN');
+           })
+        });  
+           // FadeTo function   kisi element ki opacity (transparency) change karta hai with animation.//
+
+          $('#but').click(function(){
+           $('#wiki').fadeTo("slow" , 0.5 );
+           });
+
+           // fade toggle function :- fadeToggle() jQuery me element ko fade effect ke saath hide/show toggle karta hai.//
+          
+        $('#but').click(function(){
+           $('#wiki').fadeToggle("5000" , function(){
+            console.log("fadeToggle function succesfully executed");
+           } );
+           });
     
+        
+    });
+
+
 </script>
 
 </html>
