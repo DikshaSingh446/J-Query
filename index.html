@@ -26,10 +26,29 @@
         $(this).hide();
     });
  // Events in j query //
+
+ // Mouse Events //
   $('p ').dblclick(function (){
     console.log("you doble click on :" ,this);
   });
 
+  $('p:first').mouseenter(function (){
+    console.log("Your  mouseenter evet fired : " , this);
+  });
+
+  $('p').mouseup(function (){
+    console.log(" your mouse up event fired" , this);
+  });
+
+  $('p').mouseleave(function(){
+     console.log(" your mouseleave event fired" ,this);
+  });
+   // hover  specially it take two parameter //
+    $('p').hover(function (){
+        console.log (" mouse in the elemant " , this);
+    }, function (){
+        console.log("mouse out from the element " , this)
+    });
 
     });
     
