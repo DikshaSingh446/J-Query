@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <p> Click on 1</p>
+    <p> Click on 2</p>
+    <p> Click on 3</p>
+    <p> Click on 4</p>
+    <p> Click on 5</p>
+</body>
+<script src="jq/jquery-4.0.0.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+        //properties //
+        $('p').click( function() {
+        console.log("  Radha rani");
+        $(this).hide();
+    });
+ // Events in j query //
+  $('p ').dblclick(function (){
+    console.log("you doble click on :" ,this);
+  });
+
+
+    });
+    
+</script>
+
+</html>
