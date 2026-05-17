@@ -121,6 +121,17 @@
             console.log("fadeToggle function succesfully executed");
            } );
            });
+
+           // Slide method =  speed and callback function are optional
+        $('#wiki').slideUp(1000, function()
+         {
+          console.log("Complete")          
+         });// Slide do argument leta hai pajla speed means kitne time me effect/animation complete ho our dusra argument 'callback function' after completion ke bad kya show karna hai  
+
+        $('#wiki').slideDown(1000);
+
+        $('#wiki').slideToggle(1000);//slide up hogi to down kar de ga our vice versa
+                     
     
         
     });
